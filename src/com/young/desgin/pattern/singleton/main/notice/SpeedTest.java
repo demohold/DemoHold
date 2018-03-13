@@ -1,6 +1,7 @@
 package com.young.desgin.pattern.singleton.main.notice;
 
 import com.young.desgin.pattern.singleton.main.hungry.Hungry;
+import com.young.desgin.pattern.singleton.main.lazy.LazyDoubleCheck;
 import com.young.desgin.pattern.singleton.main.lazy.LazyStaticInnerClass;
 import com.young.desgin.pattern.singleton.main.lazy.LazyThreadSafety;
 import com.young.desgin.pattern.singleton.main.lazy.LazyThreadUnsafety;
@@ -59,6 +60,11 @@ public class SpeedTest {
             RegisterMap bean=RegisterMap.getInstance();
         }
         System.out.println("注册登记式（RegisterMap -- putIfAbsent）：时间="+(System.currentTimeMillis()-start));
+        start=System.currentTimeMillis();
+        for(int i=0;i<count;i++){
+            LazyDoubleCheck bean=LazyDoubleCheck.getInstance();
+        }
+        System.out.println("懒加载（双重检测）：时间="+(System.currentTimeMillis()-start));
 
     }
 

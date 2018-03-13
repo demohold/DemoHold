@@ -12,7 +12,7 @@ public class LazyStaticInnerClass {
     //Reports methods declared final and static.
     // When a static method is overridden in a subclass it can still be accessed via the super class,making a final declaration not very necessary.
     // Declaring a static method final does prevent subclasses form defining a static method with the same signature
-    //防止静态方法被重启是需要加上final的，但是当前类是不能被继承的。所以final可以去掉。
+    //防止静态方法被重启是需要加上final的，但是当前类是不能被继承的。所以final可以去掉？
     public  final static LazyStaticInnerClass getInstance(){
         return LazyStaticInnerClassHolder.instance;
     }
