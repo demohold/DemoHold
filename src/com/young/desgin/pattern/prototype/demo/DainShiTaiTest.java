@@ -24,6 +24,7 @@ public class DainShiTaiTest {
         try {
             f2 = (Film) f.clone();
             System.out.println(f==f2);
+            System.out.println(f.getPersonList().get(0)==f2.getPersonList().get(0));
             CCTV1DianShiTai.getInstance().playFilm(f);
             CCTV2DianShiTai.getInstance().playFilm(f2);
 
